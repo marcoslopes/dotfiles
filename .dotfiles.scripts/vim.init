@@ -1,5 +1,5 @@
 #!/bin/bash
-# copied from https://github.com/justin8/dotfiles/blob/master/install 
+# copied from https://github.com/justin8/dotfiles/blob/master/install
 
 ok() {
     echo -e "[ \e[1;32mOK\e[00m ]"
@@ -9,7 +9,7 @@ failed() {
     echo -e "[\e[1;31mFAILED\e[00m]"
 }
 
-install_vimplug() {
+install_vim_plug() {
     echo -n "Installing/updating vimplug... "
     if [[ -f ~/.vim/autoload/plug.vim ]]; then
         # Vim always seems to have a return of 1...
@@ -29,5 +29,5 @@ install_vim_plugins() {
     ok
 }
 
-install_vim
+install_vim_plug
 install_vim_plugins
