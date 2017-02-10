@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# install a decent browser
+brew cask install google-chrome
+
+# window manager
+brew cask install spectacle
+
+# terminal
+brew cask install iterm2
+
+# chats
+brew cask install slack
+brew cask install hipchat
+
+# everybody needs music
+brew cask install spotify
