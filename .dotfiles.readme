@@ -1,8 +1,9 @@
-ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
-https://bitbucket.org/snippets/nicolapaolucci/ergX9
-https://news.ycombinator.com/item?id=11071754
+# Source init file from $HOME
+git archive --remote=ssh://git@bitbucket.org/marcoslopes/newdotfiles.git HEAD .dotfiles.init | tar -x
 
-git init --bare $HOME/.cfg
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+# Run it
+./.dotfiles.init
+
+# Reference to this method below:
+# ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
+# https://news.ycombinator.com/item?id=11071754

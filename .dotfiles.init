@@ -1,4 +1,18 @@
+#!/bin/bash
 git init --bare $HOME/.dotfiles
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+dotfiles() {
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+}
+
+dotfiles remote add origin ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
+
+# delete myself so there is not merge conflicts
+rm -- "$0"
+
+# pull my dotfiles
+dotfiles pull origin master
 dotfiles config --local status.showUntrackedFiles no
+dotfiles branch --set-upstream-to=origin/master master
+
 echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
