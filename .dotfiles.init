@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dotfiles() {
-    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME "$@"
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore "$@"
 }
 
 # create a bare .dotfiles git repository
@@ -24,4 +24,5 @@ dotfiles branch --set-upstream-to=origin/master master
 ./.dotfiles.scripts/gui.init
 
 # add alias to .bashrc so we can deal with dotfiles seamlessly
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.bashrc
+echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore'" >> $HOME/.bashrc
+
