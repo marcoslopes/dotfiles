@@ -1,6 +1,6 @@
 #!/usr/bin/env bash -e
 
-source ./.dotfiles.constants
+source "${HOME}/.dotfiles.constants"
 
 # Remove all managed dotfiles entries
 for purge in $(ls "${SCRIPTS}/purge.*"); do

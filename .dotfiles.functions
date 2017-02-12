@@ -3,7 +3,7 @@
 # (dotfiles) this is where the magic happens
 # https://news.ycombinator.com/item?id=11071754
 
-source ./.dotfiles.constants
+source "${HOME}/.dotfiles.constants"
 
 message() {
     if [ "$#" -e 2 ]; then
