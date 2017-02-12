@@ -21,10 +21,10 @@ PROGRAMS=(
 for p in ${PROGRAMS[@]}; do
     if ! existent "$p"; then
         info "Inexistent ${p}, installing."
-        brew install "$p"
+        brew cask install "$p"
     else
         info "Existent ${p}, updating it."
-        brew upgrade "$p" 2> /dev/null # it shows an error if already latest version
+        brew cask upgrade "$p" 2> /dev/null # it shows an error if already latest version
     fi
 done
 
