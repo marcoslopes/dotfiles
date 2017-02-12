@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -e
 
 # this script shold be standalone and not depend on .dotfiles.* files
 # as they will come down after this being executed
