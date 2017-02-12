@@ -24,3 +24,5 @@ alias down="cd ~/Downloads"
 # Use less if more than one page
 alias ack='ag -t --pager "less -RFX"'
 alias ag='ag --path-to-agignore ~/.agignore -t --pager "less -RFX"'
+
+alias ll="ls -al"
