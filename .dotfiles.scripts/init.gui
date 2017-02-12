@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash +e
 
 # install a decent browser
 brew cask install google-chrome
@@ -15,3 +15,5 @@ brew cask install hipchat
 
 # everybody needs music
 brew cask install spotify
+
+set -e

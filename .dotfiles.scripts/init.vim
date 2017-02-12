@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # copied from https://github.com/justin8/dotfiles/blob/master/install
 
 ok() {

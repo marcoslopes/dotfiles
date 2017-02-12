@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash +e
 
 # update git
 brew install git
@@ -8,3 +8,5 @@ brew install lastpass-cli --with-pinentry --with-doc
 
 # update vim
 brew install vim
+
+set -e
