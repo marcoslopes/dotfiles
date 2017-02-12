@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# (dotfiles) this is where the magic happens
+# https://news.ycombinator.com/item?id=11071754
+
+dotfiles() {
+    /usr/bin/git --git-dir=$REPOSITORY --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore "$@"
+}
+
+message() {
+    if [ "$#" -e 2 ]; then
+        TYPE="$1"
+        shift
+        printf "%s: %s" "$TYPE" "$@"
+    else
+        printf "%s" "$@"
+    fi
+}
+
+info() {
+    message "INFO" "$@"
+}
+
+error() {
+    message "ERROR" "$@"
+}

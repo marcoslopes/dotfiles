@@ -6,6 +6,13 @@ git archive --remote=ssh://git@bitbucket.org/marcoslopes/newdotfiles.git HEAD .d
 # execute main install script
 ./.dotfiles.init
 
+# backput all files managed by your dotfiles
+./.dotfiles.backup
+
+# remove all files managed by your dotfiles
+./.dotfiles.purge
+
 # Reference to this method below:
 # ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
 # https://news.ycombinator.com/item?id=11071754
+# https://github.com/justin8/dotfiles/blob/master/instal

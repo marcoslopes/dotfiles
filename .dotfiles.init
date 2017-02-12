@@ -1,14 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-dotfiles() {
-    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore "$@"
-}
+source ./.dotfiles.constants
+source ./.dotfiles.functions
 
 # create a bare .dotfiles git repository
-git init --bare $HOME/.dotfiles
+git init --bare $REPOSITORY
 dotfiles remote add origin ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
 
-# delete myself so there is not merge conflicts
+# delete myself(.dotfiles.init) so there is not merge conflicts
 rm -- "$0"
 
 # backup and remove old shell files so there is not merge conflicts
@@ -27,7 +26,11 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles branch --set-upstream-to=origin/master master
 
 # install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! which brew &>/dev/null; then
+    echo "Installing brew... "
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew doctor
+fi
 
 # install binaries
 ./.dotfiles.scripts/init.cli
