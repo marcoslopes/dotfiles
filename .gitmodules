@@ -1,0 +1,3 @@
+[submodule ".dotfiles.resources/tty/iterm2-color-schemes"]
+	path = .dotfiles.resources/tty/iterm2-color-schemes
+	url = git@github.com:mbadolato/iTerm2-Color-Schemes.git
