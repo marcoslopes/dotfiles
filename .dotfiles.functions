@@ -6,12 +6,12 @@
 source "${HOME}/.dotfiles.constants"
 
 message() {
-    if [ "$#" -e 2 ]; then
+    if [ $# -e 2 ]; then
         TYPE="$1"
         shift
         printf "%s: %s" "$TYPE" "$@"
     else
-        printf "%s" "$@"
+        printf "%s " "$@"
     fi
 }
 

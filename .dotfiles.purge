@@ -3,6 +3,11 @@
 source "${HOME}/.dotfiles.constants"
 
 # Remove all managed dotfiles entries
-for purge in $(ls ${SCRIPTS}/purge.*); do
-    source $purge
-done
+
+source "${SCRIPTS}/purge.vim"
+source "${SCRIPTS}/purge.dotfiles" # needs to be the last as it will remove scripts directory
+
+# Need to find a way for this to run in order...
+# for purge in $(ls ${SCRIPTS}/purge.*); do
+#     source $purge
+# done
