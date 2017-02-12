@@ -2,7 +2,6 @@
 
 source ./.dotfiles.functions
 
-info "Purging vim"
+info "Purging .dotfiles"
 
-rm -rf .vim
-rm -rf .vimrc
+rm -rf .dotfiles*
