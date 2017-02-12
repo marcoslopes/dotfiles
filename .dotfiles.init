@@ -11,6 +11,16 @@ dotfiles remote add origin ssh://git@bitbucket.org/marcoslopes/newdotfiles.git
 # delete myself so there is not merge conflicts
 rm -- "$0"
 
+# backup and remove old shell files so there is not merge conflicts
+if [[ -f ~/.bashrc ]]; then
+    mv ~/.bashrc ~/.bashrc.bkp
+    rm ~/.bashrc
+fi
+if [[ -f ~/.zshrc ]]; then
+    mv ~/.zshrc ~/.zshrc.bkp
+    rm ~/.zshrc
+fi
+
 # get latest .dotfiles changes
 dotfiles pull origin master
 dotfiles config --local status.showUntrackedFiles no
