@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-source ./.dotfiles.constants
-source ./.dotfiles.functions
+# this script shold be standalone and not depend on .dotfiles.* files
+# as they will come down after this being executed
+
+REPOSITORY="${HOME}/.dotfiles"
+
+dotfiles() {
+    /usr/bin/git --git-dir=$REPOSITORY --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore "$@"
+}
 
 # create a bare .dotfiles git repository
 git init --bare $REPOSITORY
