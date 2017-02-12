@@ -11,8 +11,9 @@ existent() {
 
 PROGRAMS=(
     git
+    vim
     lastpass-cli
-    vim the_silver_searcher
+    the_silver_searcher
 )
 
 for p in ${PROGRAMS[@]}; do
@@ -21,7 +22,7 @@ for p in ${PROGRAMS[@]}; do
         brew install "$p"
     else
         info "Existent ${p}, updating it."
-        brew upgrade "$p"
+        brew upgrade "$p" 2> /dev/null # it shows an error if already latest version
     fi
 done
 

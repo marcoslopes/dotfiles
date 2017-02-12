@@ -1,19 +1,31 @@
 #!/usr/bin/env bash +e
 
-# install a decent browser
-brew cask install google-chrome
+source "${HOME}/.dotfiles.functions"
 
-# window manager
-brew cask install spectacle
+existent() {
+    if [ -d "/usr/local/Caskroom/$1" ]; then
+        return 0
+    fi
+    return 1
+}
 
-# terminal
-brew cask install iterm2
+PROGRAMS=(
+    google-chrome
+    spectacle
+    iterm2
+    slack
+    hipchat
+    spotify
+)
 
-# chats
-brew cask install slack
-brew cask install hipchat
-
-# everybody needs music
-brew cask install spotify
+for p in ${PROGRAMS[@]}; do
+    if ! existent "$p"; then
+        info "Inexistent ${p}, installing."
+        brew install "$p"
+    else
+        info "Existent ${p}, updating it."
+        brew upgrade "$p" 2> /dev/null # it shows an error if already latest version
+    fi
+done
 
 set -e
