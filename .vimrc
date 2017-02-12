@@ -8,16 +8,18 @@
 filetype off " required
 call plug#begin('~/.vim/plugged')
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'majutsushi/tagbar'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-repeat'
-Plug 'nvie/vim-flake8'
+Plug 'tpope/vim-surround'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'Keithbsmiley/rspec.vim'
 Plug 'kien/ctrlp.vim'
@@ -27,9 +29,9 @@ Plug 'hashivim/vim-terraform'
 Plug 'hashivim/vim-consul'
 Plug 'hashivim/vim-packer'
 Plug 'hashivim/vim-vagrant'
-Plug 'vim-hashicorp-tools'
 Plug 'cespare/vim-toml'
 Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-rooter'
@@ -37,12 +39,13 @@ Plug 'mattn/emmet-vim'
 Plug 'mileszs/ack.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'wavded/vim-stylus', { 'for': 'styl' }
-Plug 'mustache/vim-mustache-handlebars.git', { 'for': 'mustache' } 
 Plug 'rust-lang/rust.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'chaquotay/ftl-vim-syntax'
+" Plug 'MarcWeber/vim-addon-local-vimrc'
+" Multiple file types
+" Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
 " colourschemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'nanotech/jellybeans.vim'
@@ -154,7 +157,7 @@ syntax enable
 " colorscheme jellybeans
 " colorscheme glacier
 " colorscheme monrovia
-colorscheme solarized
+colorscheme gruvbox
 
 set background=dark
 
