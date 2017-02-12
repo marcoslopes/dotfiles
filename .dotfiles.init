@@ -20,9 +20,6 @@ dotfiles branch --set-upstream-to=origin/master master
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install binaries
-./.dotfiles.scripts/cli.init
-./.dotfiles.scripts/gui.init
-
-# add alias to .bashrc so we can deal with dotfiles seamlessly
-echo "alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore'" >> $HOME/.bashrc
-
+./.dotfiles.scripts/init.cli
+./.dotfiles.scripts/init.gui
+./.dotfiles.scripts/init.vim

@@ -1,0 +1,4 @@
+alias ewe="cd ~/workspace/expedia/ewe/"
+alias expweb="cd /Users/mlopes/workspace/expedia/expweb/www/expweb/trunk"
+alias expweb_shelved="p4 changes -u mlopes -s shelved"
+alias expweb_changes="p4 revert -n //www/expweb/trunk/..."
