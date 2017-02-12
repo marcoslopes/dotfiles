@@ -1,15 +1,31 @@
 #!/usr/bin/env bash +e
 
-# update git
-brew install git
+source "${HOME}/.dotfiles.functions"
 
-# password manager
-brew install lastpass-cli --with-pinentry --with-doc
+existent() {
+    if [ -d "/usr/local/Cellar/$1" ]; then
+        return 0
+    fi
+    return 1
+}
 
-# update vim
-brew install vim
+PROGRAMS=(
+    git
+    lastpass-cli
+    vim the_silver_searcher
+)
 
-# silver searcher
-brew install the_silver_searcher
+for p in ${PROGRAMS[@]}; do
+    if ! existent "$p"; then
+        info "Inexistent ${p}, installing."
+        brew install "$p"
+    else
+        info "Existent ${p}, updating it."
+        brew update "$p"
+    fi
+done
+
+# password manager # what to do in cases where we need to use extra attributes
+# brew install lastpass-cli --with-pinentry --with-doc
 
 set -e

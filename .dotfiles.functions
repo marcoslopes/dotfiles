@@ -9,9 +9,9 @@ message() {
     if [ $# -eq 2 ]; then
         TYPE="$1"
         shift
-        printf "%s: %s" "$TYPE" "$@"
+        printf "%s: %s\n" "$TYPE" "$@"
     else
-        printf "%s " "$@"
+        printf "%s \n" "$@"
     fi
 }
 
