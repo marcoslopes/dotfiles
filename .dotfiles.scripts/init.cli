@@ -21,7 +21,7 @@ for p in ${PROGRAMS[@]}; do
         brew install "$p"
     else
         info "Existent ${p}, updating it."
-        brew update "$p"
+        brew upgrade "$p"
     fi
 done
 
