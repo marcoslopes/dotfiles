@@ -9,4 +9,7 @@ brew install lastpass-cli --with-pinentry --with-doc
 # update vim
 brew install vim
 
+# silver searcher
+brew install the_silver_searcher
+
 set -e

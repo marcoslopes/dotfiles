@@ -3,6 +3,6 @@
 source "${HOME}/.dotfiles.constants"
 
 # Remove all managed dotfiles entries
-for purge in $(ls "${SCRIPTS}/purge.*"); do
+for purge in $(ls ${SCRIPTS}/purge.*); do
     source $purge
 done
