@@ -1,1 +1,4 @@
-.vim/plugged/*
+# Ignore everything
+*
+# But not .(dot)files
+!.*
