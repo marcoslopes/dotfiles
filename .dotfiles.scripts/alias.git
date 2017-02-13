@@ -1,7 +1,0 @@
-alias gdc='git diff --cached'
-alias glg='git log --graph --oneline'
-alias gl='git log --no-merges'
-alias gcv='git ci -v'
-alias gca='git ci -v --amend'
-alias gp='git pull'
-alias gpr='git pull --rebase'

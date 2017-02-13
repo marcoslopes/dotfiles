@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-source ./.dotfiles.functions
-
-info "Purging .git*"
-
-rm -rf ~/.git*

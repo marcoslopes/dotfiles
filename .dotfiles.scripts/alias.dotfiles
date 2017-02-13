@@ -1,2 +1,0 @@
-# add alias to .bashrc so we can deal with dotfiles seamlessly
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME -c core.excludesFile=$HOME/.dotfiles.gitignore'

@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-REPOSITORY="${HOME}/.dotfiles"
-SCRIPTS="${HOME}/.dotfiles.scripts"
