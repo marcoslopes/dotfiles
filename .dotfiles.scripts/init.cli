@@ -12,6 +12,7 @@ existent() {
 PROGRAMS=(
     wget
     git
+    python
     vim
     lastpass-cli
     the_silver_searcher

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash +e
+
+source "${HOME}/.dotfiles.functions"
+
+pip install flake8
+pip install virtualenv
+
+set -e
