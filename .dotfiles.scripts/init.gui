@@ -10,8 +10,9 @@ existent() {
 }
 
 PROGRAMS=(
-    google-chrome
+    java
     eclipse-java
+    google-chrome
     spectacle
     iterm2
     slack
