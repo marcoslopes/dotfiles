@@ -123,10 +123,15 @@ export HISTCONTROL='ignoreboth'
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 
-# Source other usefull stuff, alias, functions
+# Source aliases
+source ~/.dotfiles.scripts/alias.dotfiles
+source ~/.dotfiles.scripts/alias.git
+source ~/.dotfiles.scripts/alias.misc
+source ~/.dotfiles.scripts/alias.expedia
 
-source ~/.aliases
-source ~/.functions
+# Source aliases
+source ~/.dotfiles.scripts/functions.misc
+source ~/.dotfiles.scripts/functions.expedia
 
 # source /usr/local/bin/virtualenvwrapper.sh
 # export PYTHONPATH=:/Users/marcos/pylib

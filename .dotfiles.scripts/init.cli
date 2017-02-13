@@ -15,6 +15,7 @@ PROGRAMS=(
     vim
     lastpass-cli
     the_silver_searcher
+    rbenv
 )
 
 for p in ${PROGRAMS[@]}; do
