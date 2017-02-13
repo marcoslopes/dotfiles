@@ -11,6 +11,7 @@ existent() {
 
 PROGRAMS=(
     google-chrome
+    eclipse-java
     spectacle
     iterm2
     slack
