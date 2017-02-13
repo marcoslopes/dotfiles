@@ -11,14 +11,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Set theme
-let g:airline_theme='solarized'
+" let g:airline_theme='solarized'
 " let g:airline_theme='molokai'
 " let g:airline_theme='bubblegum'
 " let g:airline_theme='base16_grayscale'
 " let g:airline_theme='cool'
 " let g:airline_theme='glacier'
 " let g:airline_theme='lucius'
+" let g:airline_theme='jellybeans'
 " let g:airline_theme='monochrome'
+let g:airline_theme='base16_grayscale'
 
 " Set tab number
 let g:airline#extensions#tabline#show_tab_nr = 1

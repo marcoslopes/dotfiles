@@ -154,10 +154,10 @@ set noswapfile
 syntax enable
 " colorscheme desert        " set colorscheme
 " colorscheme BlackSea
-" colorscheme jellybeans
 " colorscheme glacier
 " colorscheme monrovia
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme jellybeans
 
 set background=dark
 
