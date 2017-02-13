@@ -5,3 +5,4 @@ source ./.dotfiles.functions
 info "Purging .dotfiles*"
 
 rm -rf .dotfiles*
+rm -rf .oh-my-zsh
