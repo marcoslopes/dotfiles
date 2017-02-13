@@ -23,8 +23,9 @@ for p in ${PROGRAMS[@]}; do
         info "Inexistent ${p}, installing."
         brew cask install "$p"
     else
-        echo "Existent $p, updating it."
-        brew cask reinstall "$p" 2> /dev/null # it shows an error if already latest version
+        echo "Existent $p, please use 'brew cask reinstall $p', separately if you want to update it."
+        # brew cask reinstall "$p" 2> /dev/null # it shows an error if already latest version
+        # updating is a bit overkill, think about creating a new .dotfiles.update -f
     fi
 done
 
