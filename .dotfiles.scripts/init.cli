@@ -10,6 +10,7 @@ existent() {
 }
 
 PROGRAMS=(
+    wget
     git
     vim
     lastpass-cli

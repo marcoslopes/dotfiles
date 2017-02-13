@@ -28,6 +28,7 @@ fi
 dotfiles pull origin master
 dotfiles config --local status.showUntrackedFiles no
 dotfiles branch --set-upstream-to=origin/master master
+dotfiles submodule update --init --recursive
 
 # install homebrew
 if ! which brew &>/dev/null; then
@@ -40,3 +41,6 @@ fi
 ./.dotfiles.scripts/init.cli
 ./.dotfiles.scripts/init.gui
 ./.dotfiles.scripts/init.vim
+
+# set zsh as default
+chsh -s /bin/zsh
