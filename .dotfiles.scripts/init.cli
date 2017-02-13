@@ -15,6 +15,7 @@ PROGRAMS=(
     python
     vim
     lastpass-cli
+    awscli
     the_silver_searcher
     rbenv
 )
