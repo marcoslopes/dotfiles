@@ -2,6 +2,6 @@
 
 source ./.dotfiles.functions
 
-info "Purging .vim*"
+info "Purging .git*"
 
-rm -rf ~/.vim*
+rm -rf ~/.git*
