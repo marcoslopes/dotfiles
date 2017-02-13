@@ -1,7 +1,7 @@
 # Install lates XCode manually
 
 # Source init file from $HOME
-git archive --remote=ssh://git@bitbucket.org/marcoslopes/newdotfiles.git HEAD .dotfiles.init | tar -x
+git archive --remote=https://github.com/marcoslopes/dotfiles.git  HEAD .dotfiles.init | tar -x
 
 # execute main install script
 ./.dotfiles.init
